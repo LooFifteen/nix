@@ -13,10 +13,18 @@
     ../../modules/system/desktop.nix
     ../../modules/system/firmware.nix
     ../../modules/system/nixos.nix
+    ../../modules/system/bluetooth.nix
+    ../../modules/system/power.nix
+    ../../modules/system/network.nix
   ];
 
   # hostname
   networking.hostName = "david";
+
+  # dell
+  environment.systemPackages = with pkgs; [
+    dell-command-configure
+  ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
