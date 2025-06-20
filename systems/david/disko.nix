@@ -3,7 +3,7 @@
     # main disk
     disk.main = {
       type = "disk";
-      device = "/dev/disk/by-diskseq/1";
+      device = "/dev/sda";
       content = {
         type = "gpt";
         partitions = {
