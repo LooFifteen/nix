@@ -46,7 +46,7 @@
         inherit system;
         modules = [
           # configuration
-          ./systems/david/configuration.nix
+          (import ./systems/david/configuration.nix)
 
           # disko
           disko.nixosModules.disko

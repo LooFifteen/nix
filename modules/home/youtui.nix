@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 let
   youtui = pkgs.rustPlatform.buildRustPackage rec {

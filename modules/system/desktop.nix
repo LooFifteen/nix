@@ -4,7 +4,7 @@
   # desktop environment
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true; # todo: do i actually need this?
+  services.desktopManager.plasma6.enable = true; # todo: move this into own module somehow?
 
   # printing
   services.printing.enable = true;

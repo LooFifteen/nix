@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixos-hardware, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     ../../modules/system/bootloader/systemd-boot.nix
     ../../modules/system/desktop.nix
     ../../modules/system/firmware.nix
+    ../../modules/system/nixos.nix
   ];
 
   # hostname
