@@ -17,6 +17,9 @@
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
+    # nixos-hardware
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+
     # plasma-manager
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -30,6 +33,7 @@
     disko,
     home-manager,
     nixpkgs,
+    nixos-hardware,
     plasma-manager,
     ...
   } @ inputs: let
@@ -46,6 +50,9 @@
 
           # disko
           disko.nixosModules.disko
+
+          # hardware
+          nixos-hardware.nixosModules.dell-latitude-7390
 
           # home-manager
           home-manager.nixosModules.home-manager

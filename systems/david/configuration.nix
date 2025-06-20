@@ -1,15 +1,20 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, nixos-hardware, ... }:
 
 {
-  imports =
-    [
-      ./disko.nix
-      ./hardware-configuration.nix
-      ../../modules/system/bootloader/systemd-boot.nix
-      ../../modules/system/desktop.nix
-      ../../modules/system/firmware.nix
-    ];
+  imports = [
+    # disk formatting
+    ./disko.nix
 
+    # hardware
+    ./hardware-configuration.nix
+
+    # modules
+    ../../modules/system/bootloader/systemd-boot.nix
+    ../../modules/system/desktop.nix
+    ../../modules/system/firmware.nix
+  ];
+
+  # hostname
   networking.hostName = "david";
 
   # This option defines the first version of NixOS you have installed on this particular machine,
