@@ -16,6 +16,9 @@
     ../../modules/system/bluetooth.nix
     ../../modules/system/power.nix
     ../../modules/system/network.nix
+
+    # applications
+    ../../modules/system/applications/1password.nix
   ];
 
   # hostname
