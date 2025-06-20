@@ -9,7 +9,7 @@
         partitions = {
           # efi
           esp = {
-            size = "512MiB";
+            size = "512M";
             type = "EF00";
             content = {
               type = "filesystem";
@@ -42,7 +42,7 @@
       lvs = {
         # swap
         swap = {
-          size = "8GiB";
+          size = "8G";
           content.type = "swap";
         };
 
