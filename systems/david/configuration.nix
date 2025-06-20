@@ -19,6 +19,7 @@
 
     # applications
     ../../modules/system/applications/1password.nix
+    ../../modules/system/applications/discord.nix
   ];
 
   # hostname
