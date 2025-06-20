@@ -10,7 +10,7 @@
 
     # modules
     ../../modules/system/bootloader/systemd-boot.nix
-    ../../modules/system/desktop.nix
+    ../../modules/system/desktop/plasma.nix
     ../../modules/system/firmware.nix
     ../../modules/system/nixos.nix
     ../../modules/system/bluetooth.nix

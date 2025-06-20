@@ -34,4 +34,9 @@
     layout = "gb";
     variant = "";
   };
+
+  # firefox
+  programs.firefox.preferences = {
+    "widget.use-xdg-desktop-portal.file-picker" = 1;
+  };
 }

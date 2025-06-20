@@ -8,6 +8,7 @@
 
     # applications
     # ../modules/home/youtui.nix
+    ../modules/home/browser/firefox.nix
   ];
 
   # metadata
