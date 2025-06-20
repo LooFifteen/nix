@@ -4,6 +4,7 @@
   # desktop environment
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true; # todo: do i actually need this?
 
   # printing
   services.printing.enable = true;
