@@ -56,7 +56,10 @@
               plasma-manager.homeManagerModules.plasma-manager
             ];
             home-manager.users."${username}" = import ./users/${username}.nix;
-            users.users.${username}.isNormalUser = true;
+            users.users.${username} = {
+              isNormalUser = true;
+              extraGroups = [ "networkmanager" "sudo" ];
+            };
           }
         ];
         specialArgs = { inherit inputs username; };

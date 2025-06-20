@@ -7,7 +7,7 @@
     ../modules/home/plasma.nix
 
     # applications
-    ../modules/home/youtui.nix
+    # ../modules/home/youtui.nix
   ];
 
   # metadata
