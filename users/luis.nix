@@ -13,7 +13,7 @@
     ../modules/home/direnv.nix
 
     # applications
-    # ../modules/home/youtui.nix
+    ../modules/home/youtui.nix
   ];
 
   # theming
@@ -84,6 +84,13 @@
     nixfmt-rfc-style
     nixd
   ];
+
+  # 1password quick access
+  programs.plasma.hotkeys.commands."1password-quick-access" = {
+    name = "1Password Quick Access";
+    key = "Ctrl+Shift+Space";
+    command = lib.getExe' pkgs._1password-gui "1password --quick-access";
+  };
 
   # metadata
   home.stateVersion = "25.05";
