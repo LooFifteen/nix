@@ -3,17 +3,17 @@
 let
   youtui = pkgs.rustPlatform.buildRustPackage rec {
     pname = "youtui";
-    version = "0.0.22";
+    version = "0.0.25";
 
     src = pkgs.fetchFromGitHub {
       owner = "nick42d";
       repo = "youtui";
       rev = "youtui/v${version}";
-      sha256 = "sha256-CEUrCaIDJh0JcCCyjxcd16rorhoyvyIveiCVVHvkhXg=";
+      sha256 = "sha256-hxoRrt0A2JoZdjxoh69b7F3i0+m0GOlggcpihlj4LOY=";
     };
 
     useFetchCargoVendor = true;
-    cargoHash = "sha256-TMXV6djSRI5y/P3FyhDETs+LnmukDOI+9t6R4X7DrCk=";
+    cargoHash = "sha256-sXu6Db1kgNQN5QUdwjKEpypML6DFG/oU/mazxdZFM7Y=";
 
     nativeBuildInputs = with pkgs; [
       pkg-config
