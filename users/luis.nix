@@ -67,7 +67,10 @@
           serverSettings.nixd.formatting.command = [ "nixfmt" ];
         };
         files.autoSave = "onFocusChange";
-        git.confirmSync = false; # don't warn about syncing both pulling and pushing
+        git = {
+          confirmSync = false; # don't warn about syncing both pulling and pushing
+          autofetch = true;
+        };
       };
     };
   };
