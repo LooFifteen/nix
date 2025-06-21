@@ -2,6 +2,9 @@
   description = "A very basic flake";
 
   inputs = {
+    # catppuccin
+    catppuccin.url = "github:catppuccin/nix";
+
     # disko
     disko = {
       url = "github:nix-community/disko";
@@ -30,6 +33,7 @@
 
   outputs = {
     self,
+    catppuccin,
     disko,
     home-manager,
     nixpkgs,
@@ -48,6 +52,9 @@
           # configuration
           (import ./systems/david/configuration.nix)
 
+          # catppuccin
+          catppuccin.nixosModules.catppuccin
+
           # disko
           disko.nixosModules.disko
 
@@ -61,6 +68,7 @@
             home-manager.useUserPackages = true;
             home-manager.sharedModules = [
               plasma-manager.homeManagerModules.plasma-manager
+              catppuccin.homeModules.catppuccin
             ];
             home-manager.users."${username}" = import ./users/${username}.nix;
             users.users.${username} = {

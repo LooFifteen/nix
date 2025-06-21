@@ -16,6 +16,13 @@
     # ../modules/home/youtui.nix
   ];
 
+  # theming
+  catppuccin = {
+    enable = true;
+    flavor = "latte";
+    accent = "teal";
+  };
+
   # applications
   programs = {
     firefox.enable = true;
@@ -74,7 +81,7 @@
       };
     };
   };
-  home.packages = with pkgs; [ nixfmt-rfc-style ];
+  home.packages = with pkgs; [ nixfmt-rfc-style nixd ];
 
   # metadata
   home.stateVersion = "25.05";
