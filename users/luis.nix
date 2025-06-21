@@ -23,15 +23,12 @@
     accent = "teal";
   };
 
-  # applications
   programs = {
     firefox.enable = true;
-  };
-
-  # 1password signing
-  programs = {
     ssh = {
       enable = true;
+
+      # 1password ssh
       extraConfig = ''
         Host *
             IdentityAgent ~/.1password/agent.sock
@@ -44,6 +41,7 @@
       userName = "Luis";
       userEmail = "luis@lu15.dev";
 
+      # 1password signing
       extraConfig = {
         gpg = {
           format = "ssh";
@@ -53,35 +51,39 @@
         user.signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGa7ariENxxCPKeSOgovQravmd5NgzvA30E+fI5kaBN6";
       };
     };
-  };
 
-  # vscode
-  programs.vscode = {
-    enable = true;
-    profiles.default = {
-      extensions = with pkgs.vscode-extensions; [
-        mkhl.direnv
-        jnoortheen.nix-ide
-        christian-kohler.path-intellisense
-      ];
-      enableUpdateCheck = false;
+    vscode = {
+      enable = true;
+      profiles.default = {
+        extensions = with pkgs.vscode-extensions; [
+          mkhl.direnv
+          jnoortheen.nix-ide
+          christian-kohler.path-intellisense
+        ];
+        enableUpdateCheck = false;
 
-      # settings
-      userSettings = {
-        nix = {
-          enableLanguageServer = true;
-          serverPath = "nixd";
-          serverSettings.nixd.formatting.command = [ "nixfmt" ];
-        };
-        files.autoSave = "onFocusChange";
-        git = {
-          confirmSync = false; # don't warn about syncing both pulling and pushing
-          autofetch = true;
+        # settings
+        userSettings = {
+          nix = {
+            enableLanguageServer = true;
+            serverPath = "nixd";
+            serverSettings.nixd.formatting.command = [ "nixfmt" ];
+          };
+          files.autoSave = "onFocusChange";
+          git = {
+            confirmSync = false; # don't warn about syncing both pulling and pushing
+            autofetch = true;
+          };
         };
       };
     };
   };
-  home.packages = with pkgs; [ nixfmt-rfc-style nixd ];
+
+  # vscode lsp
+  home.packages = with pkgs; [
+    nixfmt-rfc-style
+    nixd
+  ];
 
   # metadata
   home.stateVersion = "25.05";

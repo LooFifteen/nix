@@ -1,8 +1,8 @@
 { ... }:
 
 {
-    programs.bash.enable = true;
+  programs.bash.enable = true;
 
-    # direnv
-    programs.direnv.enableBashIntegration = true;
+  # direnv
+  programs.direnv.enableBashIntegration = true;
 }
