@@ -79,10 +79,13 @@
     };
   };
 
-  # vscode lsp
   home.packages = with pkgs; [
+    # vscode lsp
     nixfmt-rfc-style
     nixd
+
+    # youtube music
+    youtube-music
   ];
 
   # 1password quick access
