@@ -73,6 +73,7 @@
           git = {
             confirmSync = false; # don't warn about syncing both pulling and pushing
             autofetch = true;
+            enableSmartCommit = true;
           };
         };
       };
