@@ -30,6 +30,12 @@
   # hostname
   networking.hostName = "david";
 
+  # theming
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+  };
+
   # dell
   environment.systemPackages = with pkgs; [
     dell-command-configure

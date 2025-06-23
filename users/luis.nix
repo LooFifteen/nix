@@ -18,10 +18,9 @@
   ];
 
   # theming
-  catppuccin = {
+  stylix = {
     enable = true;
-    flavor = "latte";
-    accent = "teal";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
   };
 
   programs = {
