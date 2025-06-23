@@ -14,6 +14,7 @@
 
     # applications
     ../modules/home/youtui.nix
+    ../modules/home/games.nix
   ];
 
   # theming

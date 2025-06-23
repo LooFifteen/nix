@@ -17,6 +17,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nix-gaming
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
@@ -37,6 +43,7 @@
       catppuccin,
       disko,
       home-manager,
+      nix-gaming,
       nixpkgs,
       nixos-hardware,
       plasma-manager,
@@ -61,6 +68,9 @@
             # disko
             disko.nixosModules.disko
 
+            # gaming
+            nix-gaming.nixosModules.pipewireLowLatency
+
             # hardware
             nixos-hardware.nixosModules.dell-latitude-7390
 
@@ -73,12 +83,14 @@
                 plasma-manager.homeManagerModules.plasma-manager
                 catppuccin.homeModules.catppuccin
               ];
+              home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users."${username}" = import ./users/${username}.nix;
               users.users.${username} = {
                 isNormalUser = true;
                 extraGroups = [
                   "networkmanager"
                   "wheel"
+                  "gamemode"
                 ];
               };
             }

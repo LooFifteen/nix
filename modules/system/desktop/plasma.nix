@@ -12,8 +12,14 @@
   # audio
   services.pipewire = {
     enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
+
+    # provided by nix-gaming
+    lowLatency.enable = true;
   };
+  security.rtkit.enable = true; # found this on nix-gaming, not quite sure what it does.
 
   # locale
   time.timeZone = "Europe/London";
