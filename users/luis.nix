@@ -15,6 +15,7 @@
     # applications
     ../modules/home/youtui.nix
     ../modules/home/games.nix
+    ../modules/home/jellyfin.nix
   ];
 
   # theming
