@@ -88,6 +88,9 @@
 
     # youtube music
     youtube-music
+
+    # vlc
+    vlc
   ];
 
   # 1password quick access
