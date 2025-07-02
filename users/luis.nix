@@ -16,6 +16,7 @@
     ../modules/home/youtui.nix
     ../modules/home/games.nix
     ../modules/home/jellyfin.nix
+    ../modules/home/easyeffects.nix
   ];
 
   # theming
