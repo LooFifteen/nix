@@ -61,6 +61,7 @@
           mkhl.direnv
           jnoortheen.nix-ide
           christian-kohler.path-intellisense
+          rust-lang.rust-analyzer
         ];
         enableUpdateCheck = false;
 
