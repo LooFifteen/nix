@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # desktop environment
@@ -20,6 +20,7 @@
     lowLatency.enable = true;
   };
   security.rtkit.enable = true; # found this on nix-gaming, not quite sure what it does.
+  environment.systemPackages = with pkgs; [ pulseaudio ];
 
   # locale
   time.timeZone = "Europe/London";
